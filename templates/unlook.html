@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='a.css') }}">
+		<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+		<style>
+			.bg{
+			    margin: 0 auto; /*设置元素外边距*/
+			    padding-top: 0px; /*设置元素上内边距*/
+			}
+			.shine{
+			    width: 300px; /*设置元素宽度*/
+			    font-family: "Microsoft YaHei";
+			    font-size: 40px;
+			    text-align: center;
+			    background: -webkit-linear-gradient(left, #0f0, #00f) 0 0 no-repeat;/*设置线性渐变*/
+			    -webkit-background-size: 40px;                        /*设置背景大小*/
+			    -webkit-background-clip: text;                            /*背景被裁剪到文字*/
+			    -webkit-text-fill-color: rgba(255, 255, 255, 0.3);        /*设置文字的填充颜色*/
+			    -webkit-animation: shine 2s infinite;                    /*设置动画*/
+			}
+			@-webkit-keyframes shine{   /*创建动画*/
+			    0%{
+			        background-position: 0 0;
+			    }
+			    100%{
+			        background-position: 100% 100%;
+			    }
+			}
+		</style>
+	</head>
+	<body>
+		<div class="searwide s4">
+			<div class="bg">
+				<p class="shine">{{ tag }}</p>
+			</div>
+		</div>
+		<div class="searwide s4">
+			<div class="alist">
+				<a href="../" class="fas fa-pizza-slice"></a>
+			</div>
+		</div>
+	</body>
+</html>
