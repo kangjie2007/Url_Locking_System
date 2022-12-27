@@ -1,0 +1,104 @@
+body{
+	padding: 0;
+	margin: 0;
+	background: slateblue;
+	
+}
+.searwide{
+	height: 25vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.s1{
+	background: ;
+}
+.s2{
+	background: ;
+}
+.s3{
+	background: ;
+}
+.s4{
+	background: ;
+}
+.alist{
+	position: relative;
+	box-sizing: border-box;
+}
+.alist a{
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	margin: 0 20px;
+	width: 80px;
+	height: 80px;
+	font-size: 30px;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.alist a::before{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+}
+.alist a::after{
+	content: '';
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	z-index: 0;
+	position: absolute;
+}
+.s1 .alist a:after{
+	border: 2px powderblue dashed;
+}
+.s1 .alist a:hover::after{
+	animation: ro 5s linear infinite;
+}
+@keyframes ro{
+	from{
+		transform: rotate(0);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+.s2 .alist a::after{
+	border: 1px white solid;
+	box-sizing: border-box;
+}
+.s2 .alist a:hover{
+	animation: ro 3s linear infinite;
+}
+.s3 .alist a{
+	color: rgba(0,0,0,1);
+	border: 4px white solid;
+	
+}
+.s3 .alist a::after{
+	background-color: white;
+	transition: 0.2s;
+}
+.s3 .alist a:hover::after{
+	transform: scale(.9);
+}
+.s4 .alist a{
+	color: black;
+	border: 4px white solid;
+}
+.s4 .alist a::after{
+	background-color: white;
+	transition: 0.2s;
+}
+.s4 .alist a:hover{
+	color: rgba(0,0,0,0);
+}
+.s4 .alist a:hover::after{
+	transform: scale(.9);
+	opacity: 0;
+}
